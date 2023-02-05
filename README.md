@@ -12,7 +12,7 @@ This repo includes four Jupyter Notebooks used for variious stages of my analysi
 
 <h1>Data Source</h1>
 
-You can find the original datasets [here](https://www.kaggle.com/osmihelp/datasets).
+You can find all datasets use for this project [here](https://www.kaggle.com/osmihelp/datasets).
 
 Original Source: [OSMI - Research](https://osmihelp.org/research.html).
 
