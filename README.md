@@ -26,7 +26,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 - '#' - (unique ID),
 
-1. Current Employement
+    <h3>1. Current Employement</h3>
 
 - Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
 - How many employees does your company or organization have? = 'n_employees',
@@ -58,7 +58,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Do you believe your productivity is ever affected by a mental health issue? = productivity_affected (Yes, Unsure, Not applicable to me, No),
 - If yes, what percentage of your work time (time performing primary or secondary job functions) is affected by a mental health issue? = worktime_affected (1-25%, 26-50%, 51-75%, 76-100%)
 
-2. Previous Employment
+    <h2>2. Previous Employment</h2>
 
 - Do you have previous employers? = previous_employers (0 = No, 1 = Yes),
 - Was your employer primarily a tech company/organization? = previous_tech_company (0 = No, 1 = Yes),
@@ -79,12 +79,12 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Overall, how much importance did your previous employer place on physical health? = 'importance_previous_employer_PH' (1 - 10 scale),
 - Overall, how much importance did your previous employer place on mental health? = 'importance_previous_employer_MH' (1 - 10 scale),
 
-3. Mental Health Diagnosis
+    <h3>3. Mental Health Diagnosis</h3>
 
 - Do you currently have a mental health disorder?' = current_diagnosis (Yes, No, Possibly, Don't Know),
 - Have you ever been diagnosed with a mental health disorder?' = ever_diagnosed (Yes, No),
 
-    3.1. Empty disorder columns
+    <h4>3.1. Empty disorder columns</h4>
 
 - Anxiety Disorder (Generalized, Social, Phobia, etc) = anxiety_disorders_empty (all nans),
 - Mood Disorder (Depression, Bipolar Disorder, etc) = mood_disorders_empty (all nans),
@@ -100,7 +100,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Addictive Disorder = addictive_disorders_empty (all nans),
 - Other = other_disorders_empty (all nans),
 
-    3.2. If possibly, what disorder(s) do you believe you have?
+    <h5>3.2. If possibly, what disorder(s) do you believe you have?</h5>
 
 - Anxiety Disorder (Generalized, Social, Phobia, etc).1 = anxiety_disorders_possibly ('Anxiety Disorder (Generalized, Social, Phobia, etc)', nans),
 - Mood Disorder (Depression, Bipolar Disorder, etc).1 = mood_disorders_possibly ('Mood Disorder (Depression, Bipolar Disorder, etc)', nans),
