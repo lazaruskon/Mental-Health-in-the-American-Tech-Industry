@@ -1,10 +1,10 @@
 # Mental Health in the American Tech Industry
 
-![logo_ironhack_blue 7](https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/84/original/logo-ironhack-blue.png)
+![logo_ironhack_blue 7](https://upload.wikimedia.org/wikipedia/commons/d/d8/OSMI-Logo-Medium.png?20200518150445)
 
 <h1>Project Maintenance & Contact Details</h1>
 
-The sole contributor to this project is [Lazarus Kon](https://github.com/lazaruskon). This project has been part of my final analysis project of the Ironhack bootcamp I followed (Cohort: Data Analysis Part-time July 2022 - January 2023). For any questions, you can reach out me on my [email address](lazaruskon@gmail.com).
+The sole contributor to this project is [Lazarus Kon](https://www.linkedin.com/in/lazarus-kon-27549880/). This analysis has been part of my final project of the <b>Ironhack</b> high intesity coding bootcamp I followed (Cohort: Data Analysis Part-time July 2022 - January 2023). For any questions, you can reach out to me on LinkedIn.
 
 <h1>What are you going to see on this project?</h1>
 
