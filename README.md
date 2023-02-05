@@ -214,9 +214,7 @@ Firstly, I reduced the amount of classes from 5 to 3 since the models had consid
 
 Comparing all the above models, I've concluded that Random Forests tend to the perform the best on testing data. Results include:
 
-Class 0: 0.75
-Class 1: 0.78
-Class 2: 0.92
+Class 0: 0.75, Class 1: 0.78, Class 2: 0.92
 
 Support Vector Machine was the second best performing algorithm, but most models had significant trouble predicting the test/val set. In addition to that, the most succesful scaler seems to be PolynomialFeatures especially when combined with the RandomOversampler (that aims to address the imbalance of the target variable). However, due to the very low count of data points most models tended to overfit. Indications of high variance are also linked to the low count of data points, especially for class 2. 
 
@@ -224,9 +222,7 @@ Support Vector Machine was the second best performing algorithm, but most models
 
 In order to mitigate that I used GridSearch to find the best parameters (criterion: gini, max_depth: 10, max_features: sqrt, n_estimators : 400). Hyperparameter tuning also results in better results for the test set: 
 
-Class - 0: 0.94
-Class - 1: 0.83
-Class - 2: 0.83
+Class - 0: 0.94, Class - 1: 0.83, Class - 2: 0.83
 
 Feature Importance (not included in this repo) was determined from the best perfoming Random Forest and then used as a new dataset in order to determine whether these features will result in a better performing model. They did not. A chi squared statistical test was also used to select those features that have the strongest relationship with the target variable. 
 
@@ -238,9 +234,7 @@ Performing cross validation resulted in a macro-precision score of about 0.71 (c
 
 With 95% probability (alpha = .05) the precision scores where as follow:
 
-Class 0: 0.86 - 1.0
-Class 1:  0.72 - 0.94
-Class 2: 0.62 - 1.0
+Class 0: 0.86 - 1.0, Class 1:  0.72 - 0.94, Class 2: 0.62 - 1.0
 
 The large range of the confidence interval for class 2 can be attributed to the very low amount of data points for this class. Further investigation is needed.
 
