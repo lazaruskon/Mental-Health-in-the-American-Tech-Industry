@@ -239,39 +239,49 @@ Class 1:  0.72 - 0.94
 Class 2: 0.62 - 1.0
 
 The large range of the confidence interval for class 2 can be attributed to the very low amount of data points for this class. Further investigation is needed.
+
+<b>Brief Conclusions</b>
+1. Predictive modeling has mixed effects. Not every class can be predicted to the same degree (for now). Further examining required (and more data).
+2. Demographics (e.g. race, gender) haven't played a particularly important role (BUT most are white men).
+3. Neither diagnosed nor perceived mental health disorders are affecting the overall support tech employees experience.
+4. The factors that do influence the most how supported employees feel are mostly about:
+5. The official capacity that an employer prioritizes mental health.
+6. Office openness about mental health, as negative experiences create a precedent.
+7. The influence of precedents also extend to how properly mental health was approach in the participant's previous workplace.
+
 For more details and a better understanding of these results and conclusions I invite you to check out the Notebooks of this repo.
 
 <h2>Contents of Jupyter Notebooks</h2>
 
 - <b>1. Data Collection</b>
- -  Collecting data from different annual surveys.
- -  Obtaining basic information about different surveys' traits.
- -  Merging 2017 & 2018 survey data. Due to time restrictions no further years were added.
- -  Relabeling header names and making sure that the two years measure the same variables.
- -  Focus on the American market and exporting csv.
+  - Collecting data from different annual surveys.
+  - Obtaining basic information about different surveys' traits.
+  - Merging 2017 & 2018 survey data. Due to time restrictions no further years were added.
+  - Relabeling header names and making sure that the two years measure the same variables.
+  - Focus on the American market and exporting csv.
 
 - <b>2. Data Cleaning & Exploration</b>
- - Deep dive in the data: EDA
- - Label and variable reduction.
- - Generating different files for text features and for features used for visualizations/predictive modeling.
- - Checking for outliers, nans and multicollinearity.
+  - Deep dive in the data: EDA
+  - Label and variable reduction.
+  - Generating different files for text features and for features used for visualizations/predictive modeling.
+  - Checking for outliers, nans and multicollinearity.
 
 - <b>Text Analysis</b>
- - Cleaning nans
- - Lemmatize and Tokenize
- - Define and update stopwords
- - Generate topic modeling visualiations
- - Generate wordclouds of frquent terms.
-
-- <b>Data Preprocessing & Modeling</b>
- - Scaling & encoding
- - X/y split
- - Train/test/val split
- - Applying algorithms (see above)
- - Mitigating Imbalance (see above)
- - Feature Selection & reapplying algorithms
- - Hyperparameter tuning
- - Cross Validation & Confidence intervals.
+  - Cleaning nans
+  - Lemmatize and Tokenize
+  - Define and update stopwords
+  - Generate topic modeling visualiations
+  - Generate wordclouds of frquent terms.
+  
+ - <b>Data Preprocessing & Modeling</b>
+  - Scaling & encoding
+  - X/y split
+  - Train/test/val split
+  - Applying algorithms (see above)
+  - Mitigating Imbalance (see above)
+  - Feature Selection & reapplying algorithms
+  - Hyperparameter tuning
+  - Cross Validation & Confidence intervals.
 
 <h2>Future Research</h2>
 
