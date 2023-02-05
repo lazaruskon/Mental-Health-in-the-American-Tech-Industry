@@ -190,21 +190,21 @@ I used a variety of tools, libraries and algorithms to achieve the aforementione
 - Pandas
 - Numpy
 - Text Analysis:
- - Lemmatization & tokenization, Spacy
+  - Lemmatization & tokenization, Spacy
 - Supervised learning algorithms for multiclass classification:
   - Random Forest
   - KNN
   - Support Vector Machine
   - AdaBoost
 - Balancing techniques:
- - TomekLinks
- - SMOTE
- - RandomOversamplers
+  - TomekLinks
+  - SMOTE
+  - RandomOversamplers
 - Kfold cross Validation
 - Visualizations:
- - Python: Matplotlib, Seaborn
- - Tableau
- - Canva
+  - Python: Matplotlib, Seaborn
+  - Tableau
+  - Canva
 
 <h1>Provisional Results & Conclusions</h1>
 
@@ -271,14 +271,14 @@ For more details and a better understanding of these results and conclusions I i
   - Generating different files for text features and for features used for visualizations/predictive modeling.
   - Checking for outliers, nans and multicollinearity.
 
-- <b>Text Analysis</b>
+- <b>3. Text Analysis</b>
   - Cleaning nans
   - Lemmatize and Tokenize
   - Define and update stopwords
   - Generate topic modeling visualiations
   - Generate wordclouds of frquent terms.
   
-- <b>Data Preprocessing & Modeling</b>
+- <b>4. Data Preprocessing & Modeling</b>
   - Scaling & encoding
   - X/y split
   - Train/test/val split
