@@ -210,51 +210,74 @@ I used a variety of tools, libraries and algorithms to achieve the aforementione
 
 Firstly, I reduced the amount of classes from 5 to 3 since the models had considerable difficulty detecting certain classes with very low data point counts. Specifically, 1 - 5 (Very unsupported - very supported) were transformed to classes 0, 1, 2 (Unsupported, Neutral, Supported, respectively). The metric of choice for this project's models was precision since it determines how accurately a classifier identifies the things that are relevant to its task.
 
-Comparing all the above models, I've concluded that Random Forests tend to the perform the best on testing data. Support Vector Machine was the second best performing algorithm, but most models had significant trouble predicting the test/val set. In addition to that, the most succesful scaler seems to be PolynomialFeatures especially when combined with the RandomOversampler (that aims to address the imbalance of the target variable). However, due to the very low count of data points most models tended to overfit. Indications of high variance are also linked to the low count of data points, especially for class 2. In order to mitigate that I used GridSearch to find the best parameters.
+<b>Baseline Scores</b>
+Comparing all the above models, I've concluded that Random Forests tend to the perform the best on testing data. Results include:
+
+Class 0: 0.75
+Class 1: 0.78
+Class 2: 0.92
+
+Support Vector Machine was the second best performing algorithm, but most models had significant trouble predicting the test/val set. In addition to that, the most succesful scaler seems to be PolynomialFeatures especially when combined with the RandomOversampler (that aims to address the imbalance of the target variable). However, due to the very low count of data points most models tended to overfit. Indications of high variance are also linked to the low count of data points, especially for class 2. 
+
+<b>Hyperparameter Tuning: GridSearch</b>
+In order to mitigate that I used GridSearch to find the best parameters (criterion: gini, max_depth: 10, max_features: sqrt, n_estimators : 400). Hyperparameter tuning also results in better results for the test set: 
+
+Class - 0: 0.94
+Class - 1: 0.83
+Class - 2: 0.83
 
 Feature Importance (not included in this repo) was determined from the best perfoming Random Forest and then used as a new dataset in order to determine whether these features will result in a better performing model. They did not. A chi squared statistical test was also used to select those features that have the strongest relationship with the target variable. 
 
-Performing cross validation resulted in a macro-precision score of about 0.
+<b>Cross Validation</b>
+Performing cross validation resulted in a macro-precision score of about 0.71 (cv = 20).
 
-We're building confidence intervals for this model's recall scores next. Confidence Intervals: With 95% probability the true recall of 0 (No) is in between 0.882 and 0.897. For class 1 (Yes) the true recall is between 0.588 and 0.651 with a 95% probability. 
+<b>Confidence Intervals</b> 
+With 95% probability (alpha = .05) the precision scores where as follow:
 
+Class 0: 0.86 - 1.0
+Class 1:  0.72 - 0.94
+Class 2: 0.62 - 1.0
+
+The large range of the confidence interval for class 2 can be attributed to the very low amount of data points for this class. Further investigation is needed.
 For more details and a better understanding of these results and conclusions I invite you to check out the Notebooks of this repo.
 
 <h2>Contents of Jupyter Notebooks</h2>
 
-- 1. <b>Attribute Information</b>
-  - 1.1. Importing Dependencies & Loading the Data
-- 2. <b>Data Cleaning</b>
-  - 2.1. Nan Values
-  - 2.2. Feature Cleaning
-- 3. <b>Explanatory Data Analysis</b>
-  - 3.1. Checking the Normality of the Target Variable
-  - 3.2. Continuous Variables
-  - 3.3 Categorical Variables
-    - 3.3.1. Visualizing our Target Variable
-  - 3.4. Collinearity
-    - 3.4.1. Bivariate Analysis
-    - 3.4.2. Correlation Matrix
-  - 3.5. Checking for Outliers
-    - 3.5.1. Removing Outliers
-  - 3.6. Feature Selection
-- 4. <b>Preprocessing</b>
-  - 4.1. Encoding Categorical Features
-    - 4.1.1. Encoding Target Variable
-  - 4.2. Train / Test Split
-  - 4.3 Random Forests
-    - 4.3.1. Random Forest for Feature Importance (Original Data)
-    - 4.3.2. Random Forest for Feature Importance (Clean Data)
-  - 4.4. Train / Test Split with Important Features
-- 5. <b>Creating Predictive Models</b>
-  - 5.1 Baseline Logistic Regression
-  - 5.2 KNeighbors Classifier Application & Evaluation
-  - 5.3. MLP Classifier Application & Evaluation
-  - 5.4 Addressing Imbalance with SMOTE
-  - 5.5. Addressing Imbalance with TomeKLinks
-- 6. <b>Additional Models</b>
-  - 6.1. Support Vector Machine
-  - 6.2. XGboost
-- 7. <b>Model Selection</b>
-  - 7.1. Confidence Intervals
+- <b>1. Data Collection</b>
+ -  Collecting data from different annual surveys.
+ -  Obtaining basic information about different surveys' traits.
+ -  Merging 2017 & 2018 survey data. Due to time restrictions no further years were added.
+ -  Relabeling header names and making sure that the two years measure the same variables.
+ -  Focus on the American market and exporting csv.
 
+- <b>2. Data Cleaning & Exploration</b>
+ - Deep dive in the data: EDA
+ - Label and variable reduction.
+ - Generating different files for text features and for features used for visualizations/predictive modeling.
+ - Checking for outliers, nans and multicollinearity.
+
+- <b>Text Analysis</b>
+ - Cleaning nans
+ - Lemmatize and Tokenize
+ - Define and update stopwords
+ - Generate topic modeling visualiations
+ - Generate wordclouds of frquent terms.
+
+- <b>Data Preprocessing & Modeling</b>
+ - Scaling & encoding
+ - X/y split
+ - Train/test/val split
+ - Applying algorithms (see above)
+ - Mitigating Imbalance (see above)
+ - Feature Selection & reapplying algorithms
+ - Hyperparameter tuning
+ - Cross Validation & Confidence intervals.
+
+<h2>Future Research</h2>
+
+After some consideration, the author of these notebooks has decided to continue working on this project by:
+
+1. Building a Neural Network architecture in order to address the issues of overfitting/variance.
+2. Adding data from more years. Due to time restrictions only data from the 2017 - 2018 annual surveys were used. That could address the use of having low amount of data points for certain classes.
+3. Being able to use historical data might reveal even more dynamics currently not visible.
+4. Use additional strategies to address nan values.
