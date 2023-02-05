@@ -26,8 +26,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 - '#' - (unique ID),
 
-    <h3>1. Current Employement</h3>
-
+<h3>1. Current Employement</h3>
 - Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
 - How many employees does your company or organization have? = 'n_employees',
 - Is your employer primarily a tech company/organization? = 'tech_company' (0 = No, 1 = Yes),
@@ -58,8 +57,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Do you believe your productivity is ever affected by a mental health issue? = productivity_affected (Yes, Unsure, Not applicable to me, No),
 - If yes, what percentage of your work time (time performing primary or secondary job functions) is affected by a mental health issue? = worktime_affected (1-25%, 26-50%, 51-75%, 76-100%)
 
-    <h2>2. Previous Employment</h2>
-
+<h2>2. Previous Employment</h2>
 - Do you have previous employers? = previous_employers (0 = No, 1 = Yes),
 - Was your employer primarily a tech company/organization? = previous_tech_company (0 = No, 1 = Yes),
 - Have your previous employers provided mental health benefits? = previous_employer_MH_benefits (Some did, No, none did, I don't know, Yes, they all did),
@@ -79,13 +77,11 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Overall, how much importance did your previous employer place on physical health? = 'importance_previous_employer_PH' (1 - 10 scale),
 - Overall, how much importance did your previous employer place on mental health? = 'importance_previous_employer_MH' (1 - 10 scale),
 
-    <h3>3. Mental Health Diagnosis</h3>
-
+<h3>3. Mental Health Diagnosis</h3>
 - Do you currently have a mental health disorder?' = current_diagnosis (Yes, No, Possibly, Don't Know),
 - Have you ever been diagnosed with a mental health disorder?' = ever_diagnosed (Yes, No),
 
     <h4>3.1. Empty disorder columns</h4>
-
 - Anxiety Disorder (Generalized, Social, Phobia, etc) = anxiety_disorders_empty (all nans),
 - Mood Disorder (Depression, Bipolar Disorder, etc) = mood_disorders_empty (all nans),
 - Psychotic Disorder (Schizophrenia, Schizoaffective, etc) = psychotic_disorders_empty (all nans),
@@ -100,8 +96,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Addictive Disorder = addictive_disorders_empty (all nans),
 - Other = other_disorders_empty (all nans),
 
-    <h5>3.2. If possibly, what disorder(s) do you believe you have?</h5>
-
+    <h4>3.2. If possibly, what disorder(s) do you believe you have?</h4>
 - Anxiety Disorder (Generalized, Social, Phobia, etc).1 = anxiety_disorders_possibly ('Anxiety Disorder (Generalized, Social, Phobia, etc)', nans),
 - Mood Disorder (Depression, Bipolar Disorder, etc).1 = mood_disorders_possibly ('Mood Disorder (Depression, Bipolar Disorder, etc)', nans),
 - Psychotic Disorder (Schizophrenia, Schizoaffective, etc).1 = psychotic_disorders_possibly (all nans),
@@ -116,8 +111,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Addictive Disorder.1 = addictive_disorders_possibly (Addictive Disorder, nans),
 - Other.1 = other_disorders_possibly (Asperger, Autism, Suicidal, nans),
 
-    3.3 If so, what disorder(s) were you diagnosed with?
-
+    <h4>3.3 If so, what disorder(s) were you diagnosed with?</h4>
 - Anxiety Disorder (Generalized, Social, Phobia, etc).2 = anxiety_disorders ('Anxiety Disorder (Generalized, Social, Phobia, etc)', nans),
 - Mood Disorder (Depression, Bipolar Disorder, etc).2 = mood_disorders ('Mood Disorder (Depression, Bipolar Disorder, etc)', nans),
 - Psychotic Disorder (Schizophrenia, Schizoaffective, etc).2 = psychotic_disorders ('Psychotic Disorder ('Schizophrenia, Schizoaffective, etc)', nans),
@@ -132,8 +126,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Addictive Disorder.2 = addictive_disorders (Addictive Disorder, nans),
 - Other.2 = other_disorders (Depression, Autism, Autism Spectrum Disorder, Depression, Depression, Anxiety, Developmental Trauma, Gender Dysphoria, Panic Disorder, Panic disorder, Tourette's, nans),
 
-4. Mental Health History & Treatment
-
+<h2>4. Mental Health History & Treatment</h2>
 - Have you had a mental health disorder in the past? = MH_disorder (Yes, No, Possibly, Don't Know),
 - Have you ever sought treatment for a mental health disorder from a mental health professional? = sought_treatment (0 = No, 1 = Yes),
 - Do you have a family history of mental illness? = family_history (Yes, No, I don't know),
@@ -158,8 +151,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - If there is anything else you would like to tell us that has not been covered by the survey questions, please use this space to do so. = other_comments,
 - Would you be willing to talk to one of us more extensively about your experiences with mental health issues in the tech industry? (Note that all interview responses would be used anonymously and only with your permission.) = followup_talk (0 = No, 1 = Yes),
 
-5. Demographics
-
+<h2>5. Demographics</h2>
 - What is your age? = age (various ages),
 - What is your gender? = gender (various genders),
 - What country do you live in? = country_live (various countries),
