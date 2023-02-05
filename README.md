@@ -8,7 +8,7 @@ The sole contributor to this project is [Lazarus Kon](https://github.com/lazarus
 
 <h1>What are you going to see on this project?</h1>
 
-This repo includes four Jupyter Notebooks used for variious stages of my analysis. We also include links to a presentation on [Canva](https://www.canva.com/design/DAFYMS0ptmk/kQieJH3YlV_TsNN8nv5Fiw/view?utm_content=DAFYMS0ptmk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) and a Tableau Dashboard. For this interactive Dashboard a [Desktop version](url here) and a [Laptop version](url here).
+This repo includes four Jupyter Notebooks used in various stages of my analysis. We also include links to a presentation on [Canva](https://www.canva.com/design/DAFYMS0ptmk/kQieJH3YlV_TsNN8nv5Fiw/view?utm_content=DAFYMS0ptmk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) and a Tableau Dashboard. For this interactive [Dashboard](https://public.tableau.com/views/MentalHealthinUSTechIndustry_laptop_view/DashboardLightMode?:language=en-US&:display_count=n&:origin=viz_share_link) I made a light and dark mode to enhance usability.
 
 <h1>Data Source</h1>
 
@@ -211,6 +211,7 @@ I used a variety of tools, libraries and algorithms to achieve the aforementione
 Firstly, I reduced the amount of classes from 5 to 3 since the models had considerable difficulty detecting certain classes with very low data point counts. Specifically, 1 - 5 (Very unsupported - very supported) were transformed to classes 0, 1, 2 (Unsupported, Neutral, Supported, respectively). The metric of choice for this project's models was precision since it determines how accurately a classifier identifies the things that are relevant to its task.
 
 <b>Baseline Scores</b>
+
 Comparing all the above models, I've concluded that Random Forests tend to the perform the best on testing data. Results include:
 
 Class 0: 0.75
@@ -220,6 +221,7 @@ Class 2: 0.92
 Support Vector Machine was the second best performing algorithm, but most models had significant trouble predicting the test/val set. In addition to that, the most succesful scaler seems to be PolynomialFeatures especially when combined with the RandomOversampler (that aims to address the imbalance of the target variable). However, due to the very low count of data points most models tended to overfit. Indications of high variance are also linked to the low count of data points, especially for class 2. 
 
 <b>Hyperparameter Tuning: GridSearch</b>
+
 In order to mitigate that I used GridSearch to find the best parameters (criterion: gini, max_depth: 10, max_features: sqrt, n_estimators : 400). Hyperparameter tuning also results in better results for the test set: 
 
 Class - 0: 0.94
@@ -229,9 +231,11 @@ Class - 2: 0.83
 Feature Importance (not included in this repo) was determined from the best perfoming Random Forest and then used as a new dataset in order to determine whether these features will result in a better performing model. They did not. A chi squared statistical test was also used to select those features that have the strongest relationship with the target variable. 
 
 <b>Cross Validation</b>
+
 Performing cross validation resulted in a macro-precision score of about 0.71 (cv = 20).
 
 <b>Confidence Intervals</b> 
+
 With 95% probability (alpha = .05) the precision scores where as follow:
 
 Class 0: 0.86 - 1.0
@@ -241,6 +245,7 @@ Class 2: 0.62 - 1.0
 The large range of the confidence interval for class 2 can be attributed to the very low amount of data points for this class. Further investigation is needed.
 
 <b>Brief Conclusions</b>
+
 1. Predictive modeling has mixed effects. Not every class can be predicted to the same degree (for now). Further examining required (and more data).
 2. Demographics (e.g. race, gender) haven't played a particularly important role (BUT most are white men).
 3. Neither diagnosed nor perceived mental health disorders are affecting the overall support tech employees experience.
@@ -273,7 +278,7 @@ For more details and a better understanding of these results and conclusions I i
   - Generate topic modeling visualiations
   - Generate wordclouds of frquent terms.
   
- - <b>Data Preprocessing & Modeling</b>
+- <b>Data Preprocessing & Modeling</b>
   - Scaling & encoding
   - X/y split
   - Train/test/val split
