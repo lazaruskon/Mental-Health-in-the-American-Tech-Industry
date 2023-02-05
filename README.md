@@ -13,8 +13,8 @@ This repo includes four Jupyter Notebooks used for variious stages of my analysi
 <h1>Data Source</h1>
 
 You can find all datasets use for this project [here](https://www.kaggle.com/osmihelp/datasets).
-
 Original Source: [OSMI - Research](https://osmihelp.org/research.html).
+Similarity Matrix Source: [ekwiecinska - Kaggle](https://www.kaggle.com/datasets/ekwiecinska96/mental-health-in-techology-survey-2014-and-2016)
 
 Open Sourcing Mental Health (OSMI) is a non-profit, 501(c)(3) corporation dedicated to raising awareness, educating, and providing resources to support mental wellness in the tech and open source communities. EIN: 81-3587896
 
@@ -175,9 +175,10 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 <h1>About the project</h1>
 
 Project goals included:
- 1. Understand exactly how satisfied tech employees are with mental health issues (Classification, target variable overall_support)
- 2. Explore which traits of survey participants and their working environments contribute to this anaysis.
- 3. Bring everything above together with data visualizations to describe how these employee traits translate to demographics.
+ 1. Understand exactly how satisfied tech employees are with mental health issues (Multiclass Classification, target variable overall_support)
+ 2. Explore which traits of the survey's participants and their working environments contribute to this anaysis.
+ 3. Use the participants' own words to describe their experiences through text analysis.
+ 4. Bring everything above together with data visualizations to describe how these employee traits translate to demographics.
 
 Project Importance:
 The tech industry is ever expanding and as more and more people start tech positions the need to understand mental health in this field is extremely important.
@@ -185,34 +186,41 @@ Moreover, open-sourcing mental health promotes transparency and can immensely he
 
 <h1>Tools & Methods of Analysis</h1>
 
-We used a variety of instruments, libraries and models to achieve the aforementioned goals. Among others we used: 
+I used a variety of tools, libraries and algorithms to achieve the aforementioned goals. Among others we used: 
 - Pandas
 - Numpy
-- Matplotlib
-- Seaborn
-- scikit-learn
-- math
-- Supervised learning models for classification:
+- Text Analysis:
+ - Lemmatization & tokenization, Spacy
+- Supervised learning algorithms for multiclass classification:
   - Random Forest
-  - Logistic Regression
-  - KNeighbors
-  - MLP
+  - KNN
   - Support Vector Machine
-  - XGboost
+  - AdaBoost
+- Balancing techniques:
+ - TomekLinks
+ - SMOTE
+ - RandomOversamplers
+- Kfold cross Validation
+- Visualizations:
+ - Python: Matplotlib, Seaborn
+ - Tableau
+ - Canva
 
 <h1>Provisional Results & Conclusions</h1>
 
-Comparing all the above models, we concluded that despite our efforts the highest recall score for 1 (Yes) is 0.62, with the overall values ranging from 0.43 to 0.62. Correspondingly, the highest recall score for 0 (No) is 0.94, with the overall values ranging from 0.88 to 0.94. Moreover, we observed high accuracy scores across the board, but quite low F1 scores (for Yes).
+Firstly, I reduced the amount of classes from 5 to 3 since the models had considerable difficulty detecting certain classes with very low data point counts. Specifically, 1 - 5 (Very unsupported - very supported) were transformed to classes 0, 1, 2 (Unsupported, Neutral, Supported, respectively). The metric of choice for this project's models was precision since it determines how accurately a classifier identifies the things that are relevant to its task.
 
-Overall, the best performing combination of dataframes and scalers for 1 (Yes) is the standard scaler on the dataframe based on the feature importance, including all outliers. The same for 0 (No) is the polynomial features for the data frame that includes all features but no outliers.
+Comparing all the above models, I've concluded that Random Forests tend to the perform the best on testing data. Support Vector Machine was the second best performing algorithm, but most models had significant trouble predicting the test/val set. In addition to that, the most succesful scaler seems to be PolynomialFeatures especially when combined with the RandomOversampler (that aims to address the imbalance of the target variable). However, due to the very low count of data points most models tended to overfit. Indications of high variance are also linked to the low count of data points, especially for class 2. In order to mitigate that I used GridSearch to find the best parameters.
 
-Finally, applying oversampling or undersampling techniques has not significantly improved our models' scores. A trend we observed is that SMOTE tends to slightly increase recall but dramatically decrease precision. The exact opposite is true when we apply TomeKLinks with reducing recall to increase precision.
+Feature Importance (not included in this repo) was determined from the best perfoming Random Forest and then used as a new dataset in order to determine whether these features will result in a better performing model. They did not. A chi squared statistical test was also used to select those features that have the strongest relationship with the target variable. 
 
-Based on all these observations we decided to use the Logistic Regression (Important Original Data / Scaler 1) as our reporting result. We're building confidence intervals for this model's recall scores next. Confidence Intervals: With 95% probability the true recall of 0 (No) is in between 0.882 and 0.897. For class 1 (Yes) the true recall is between 0.588 and 0.651 with a 95% probability. 
+Performing cross validation resulted in a macro-precision score of about 0.
 
-For more details and a better understanding of these results and conclusions we invite you to check out our Notebook.
+We're building confidence intervals for this model's recall scores next. Confidence Intervals: With 95% probability the true recall of 0 (No) is in between 0.882 and 0.897. For class 1 (Yes) the true recall is between 0.588 and 0.651 with a 95% probability. 
 
-<h2>Table of Content of Jupyter Notebook</h2>
+For more details and a better understanding of these results and conclusions I invite you to check out the Notebooks of this repo.
+
+<h2>Contents of Jupyter Notebooks</h2>
 
 - 1. <b>Attribute Information</b>
   - 1.1. Importing Dependencies & Loading the Data
