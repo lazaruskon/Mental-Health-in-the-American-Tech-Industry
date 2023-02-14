@@ -24,6 +24,17 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 <h1>Feature Description & Relabeling</h1>
 
+
+<details>
+<summary>Current Employement</summary>
+<ul><li>Details about participant current workspace</li>
+<li>
+- Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
+- How many employees does your company or organization have? = 'n_employees',
+
+</li></ul>
+</details>
+
 - '#' - (unique ID),
 
 <h3>1. Current Employement</h3>
