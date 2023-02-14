@@ -29,7 +29,8 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 <summary>Current Employement</summary>
  <ul><i>Details about participant current workspace</i>
 <li>
-- Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
+
+ - Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
 - How many employees does your company or organization have? = 'n_employees',
 - Is your employer primarily a tech company/organization? = 'tech_company' (0 = No, 1 = Yes),
 - Is your primary role within your company related to tech/IT? = 'tech_job' (0 = No, 1 = Yes),
