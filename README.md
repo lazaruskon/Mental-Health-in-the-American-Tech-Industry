@@ -27,7 +27,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 <details>
 <summary>1. Current Employement</summary>
- <ul><i>Details about participant current workspace</i>
+ <ul><i>Details about participant's current workspace</i>
 <li>
 
  - Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
@@ -66,7 +66,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 <details>
 <summary>2. Previous Employment</summary>
- <ul><i>Details about participant previous workspace</i>
+ <ul><i>Details about participant's previous workspace</i>
 <li>
 
  - Do you have previous employers? = previous_employers (0 = No, 1 = Yes),
@@ -152,7 +152,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
  
 <details>
 <summary>4. Mental Health History & Treatment</summary>
-<ul><i>Details about participant current workspace</i>
+<ul><i>Details about participant's mental health history</i>
 <li>
 
 - Have you had a mental health disorder in the past? = MH_disorder (Yes, No, Possibly, Don't Know),
@@ -183,7 +183,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
  
  <details>
 <summary>5. Demographics</summary>
-<ul><i>Details about participant current workspace</i>
+<ul><i>Participant's identity and socioeconomic details</i>
 <li>
 
 - '#' - (unique ID)
