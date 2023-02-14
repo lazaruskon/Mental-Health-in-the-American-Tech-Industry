@@ -92,7 +92,10 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 </details>
  
  
-<h3>3. Mental Health Diagnosis</h3>
+<details>
+<summary>3. Mental Health Diagnosis</summary>
+ <ul><i>Details about participant's mental health status</i>
+<li>
 
 - Do you currently have a mental health disorder?' = current_diagnosis (Yes, No, Possibly, Don't Know),
 - Have you ever been diagnosed with a mental health disorder?' = ever_diagnosed (Yes, No),
@@ -145,6 +148,10 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Addictive Disorder.2 = addictive_disorders (Addictive Disorder, nans),
 - Other.2 = other_disorders (Depression, Autism, Autism Spectrum Disorder, Depression, Depression, Anxiety, Developmental Trauma, Gender Dysphoria, Panic Disorder, Panic disorder, Tourette's, nans),
 
+</li></ul>
+</details>
+ 
+ 
 <h2>4. Mental Health History & Treatment</h2>
 
 - Have you had a mental health disorder in the past? = MH_disorder (Yes, No, Possibly, Don't Know),
