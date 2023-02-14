@@ -147,12 +147,13 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Substance Use Disorder.2 = substance_use_disorders (Substance Use Disorder, nans),
 - Addictive Disorder.2 = addictive_disorders (Addictive Disorder, nans),
 - Other.2 = other_disorders (Depression, Autism, Autism Spectrum Disorder, Depression, Depression, Anxiety, Developmental Trauma, Gender Dysphoria, Panic Disorder, Panic disorder, Tourette's, nans),
-
 </li></ul>
 </details>
  
- 
-<h2>4. Mental Health History & Treatment</h2>
+<details>
+<summary>4. Mental Health History & Treatment</summary>
+<ul><i>Details about participant current workspace</i>
+<li>
 
 - Have you had a mental health disorder in the past? = MH_disorder (Yes, No, Possibly, Don't Know),
 - Have you ever sought treatment for a mental health disorder from a mental health professional? = sought_treatment (0 = No, 1 = Yes),
@@ -177,8 +178,13 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Briefly describe what you think the industry as a whole and/or employers could do to improve mental health support for employees. = describe_industry_AOI (various descriptions) areas of improvement,
 - If there is anything else you would like to tell us that has not been covered by the survey questions, please use this space to do so. = other_comments,
 - Would you be willing to talk to one of us more extensively about your experiences with mental health issues in the tech industry? (Note that all interview responses would be used anonymously and only with your permission.) = followup_talk (0 = No, 1 = Yes),
-
-<h2>5. Demographics</h2>
+</li></ul>
+</details>
+ 
+ <details>
+<summary>5. Demographics</summary>
+<ul><i>Details about participant current workspace</i>
+<li>
 
 - '#' - (unique ID)
 - What is your age? = age (various ages),
@@ -192,7 +198,10 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 - Start Date (UTC) = start_date (various dates),
 - Submit Date (UTC) = submit_date (various dates),
 - Network ID = network_id (unique network id)
-
+</li></ul>
+</details>
+ 
+ 
 <h1>About the project</h1>
 
 Project goals included:
