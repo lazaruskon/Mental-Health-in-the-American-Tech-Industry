@@ -27,15 +27,41 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 <details>
 <summary>Current Employement</summary>
-<ul><li>Details about participant current workspace</li>
+ <ul><i>Details about participant current workspace</i>
 <li>
 - Are you self-employed? = 'self_employed' (0 = No, 1 = Yes),
 - How many employees does your company or organization have? = 'n_employees',
+- Is your employer primarily a tech company/organization? = 'tech_company' (0 = No, 1 = Yes),
+- Is your primary role within your company related to tech/IT? = 'tech_job' (0 = No, 1 = Yes),
+- Does your employer provide mental health benefits\xa0as part of healthcare coverage? = employer_MH_benefits (Yes, I don't know, No, Not Eligible for coverage / NA),
+- Do you know the options for mental health care available under your employer-provided health coverage? = knows_coverage (Yes, No),
+- Has your employer ever formally discussed mental health (for example, as part of a wellness campaign or other official communication)? = formal_discussion (Yes, No, I don't know),
+- Does your employer offer resources to learn more about mental health disorders and options for seeking help? = learning_resources (Yes, No, I don't know),
+- Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources provided by your employer? = anonymity_protected (Yes, No, I don't know),
+- If a mental health issue prompted you to request a medical leave from work, how easy or difficult would it be to ask for that leave? = ask_MH_leave,
+- Would you feel more comfortable talking to your coworkers about your physical health or your mental health? = talk_about_health (Physical health, Same level of comfort for each, Mental health),
+- Would you feel comfortable discussing a mental health issue with your direct supervisor(s)? = discuss_MH_supervisor (Yes, No, Maybe),
+- Have you ever discussed your mental health with your employer? = ever_discuss_employer (0 = No, 1 = Yes),
+- Describe the conversation you had with your employer about your mental health, including their reactions and what actions were taken to address your mental health issue/questions. = describe_discussion_employer (various descriptions),
+- Would you feel comfortable discussing a mental health issue with your coworkers? = discuss_MH_coworker (Yes, No, Maybe),
+- Have you ever discussed your mental health with coworkers? = ever_discuss_coworker (0 = No, 1 = Yes),
+- Describe the conversation with coworkers you had about your mental health including their reactions. = 'describe_discussion_coworker' (various descriptions),
+- Have you ever had a coworker discuss their or another coworker's mental health with you? = coworker_discuss_coworker (0 = No, 1 = Yes),
+- Describe the conversation your coworker had with you about their mental health (please do not use names). = describe_coworker_discussion_coworker (various descriptions),
+- Overall, how much importance does your employer place on physical health? = importance_employer_PH (1 - 10 scale),
+- Overall, how much importance does your employer place on mental health? = importance_employer_MH (1 - 10 scale),
+- Do you have medical coverage (private insurance or state-provided) that includes treatment of mental health disorders? = MH_medical_coverage (0 = No, 1 = Yes),
+- Do you know local or online resources to seek help for a mental health issue? = knows_MH_resources (I know some, Yes, I know several, No, I don't know any),
+- If you have been diagnosed or treated for a mental health disorder, do you ever reveal this to clients or business contacts? = reveal_MH_client ('Not applicable to me', 'No, because it would impact me negatively', 'Sometimes, if it comes up', 'No, because it doesn't matter', 'Yes, always'),
+- If you have revealed a mental health disorder to a client or business contact, how has this affected you or the relationship? = reveal_MH_effect_client (I'm not sure, Negatively, No change, Positively)
+- If you have been diagnosed or treated for a mental health disorder, do you ever reveal this to coworkers or employees? = reveal_MH_coworker ('Not applicable to me', 'No, because it would impact me negatively', 'Sometimes, if it comes up', 'No, because it doesn't matter', 'Yes, always'),
+- If you have revealed a mental health disorder to a coworker or employee, how has this impacted you or the relationship? = reveal_MH_effect_coworker (Not applicable to me, I'm not sure, Negatively, No change, Positively),
+- Do you believe your productivity is ever affected by a mental health issue? = productivity_affected (Yes, Unsure, Not applicable to me, No),
+- If yes, what percentage of your work time (time performing primary or secondary job functions) is affected by a mental health issue? = worktime_affected (1-25%, 26-50%, 51-75%, 76-100%).
 
 </li></ul>
 </details>
 
-- '#' - (unique ID),
 
 <h3>1. Current Employement</h3>
 
@@ -171,6 +197,7 @@ The data is compised of multiple annual surveys filled out by tech employees glo
 
 <h2>5. Demographics</h2>
 
+- '#' - (unique ID)
 - What is your age? = age (various ages),
 - What is your gender? = gender (various genders),
 - What country do you live in? = country_live (various countries),
